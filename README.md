@@ -12,10 +12,9 @@ PHP / MySQL based help desk ticketing application
 
 ## What is broken?
 * The various CAPTCHAs are either broken or are outdated
-* [MathGuard](http://www.codegravity.com/projects/mathguard) is at
+* [MathGuard](http://www.codegravity.com/projects/mathguard) is old.
 * QuestCHA uses a dead link: http://thissitekicksass.net/incoming.php to get it's question and answer sets
 * [Securimage](http://www.phpcaptcha.org/) is at v1.0.3.1 dated 2008-03-24
-* [MathGuard](http://www.codegravity.com/projects/mathguard) is old too.
 * All DIRECTORY_SEPARATOR are now forward slashes since PHP 5.3 onwards uses them for web urls.
 
 ## Licence
