@@ -1,0 +1,187 @@
+/* Theme Style */
+
+* { margin: 0; padding: 0; }
+
+img { vertical-align: middle; }
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+color: black;
+background: #F4F4F4;
+	margin-top: 10px;
+}
+
+.container {
+width: 740px;	
+border: 1px solid #cccccc;
+	margin: auto;
+background: white;
+}
+
+.content {
+	margin: auto;
+	padding: 10px;
+	clear: both;
+}
+
+a { 
+	
+color:#006699; 
+	
+text-decoration: none;
+
+}
+a:hover { 
+	
+color:#DB8606; 
+	
+text-decoration: underline; 
+	
+}
+
+td {
+	color: #3E3E3E;
+	text-decoration: none;
+	border: none;
+}
+p { padding: 3px 0 3px 0; }
+h1,h2,h3,h4,h5,h6 { margin: 5px 0 5px 0; }
+hr {
+  text-align: center;
+  margin: 5px auto 5px auto;
+  border: 0;
+  width: 100%;
+  color: #F3C67D;
+  background-color: #F3C67D;
+  height: 2px;
+}
+.nav {
+	border-top: 1px solid #999;
+background: #EEB358 url("images/bgbar.gif");
+	line-height: 25px;
+	height: 25px;
+	text-align: right;
+}
+.nav li {
+	height: 25px;
+	line-height: 25px;
+	margin-left: 3px;
+	display: inline;
+}
+.nav ul { padding-right: 5px; }
+.nav a {
+color: white;
+	text-decoration: none;
+	border: none;
+}
+.nav a:hover { 
+	
+color: black;
+	
+	text-decoration: none; 
+	
+}
+
+option { padding-right: 5px; }
+.content table td { padding: 3px; }
+.content table td table td { padding: 2px; }
+.content table td table td table,.content table td table td table td { padding: 0; margin: 0; }
+.pre-footer {
+	border-bottom: 1px solid #999;
+background: #EEB358 url("images/bgbar.gif");
+	line-height: 25px;
+	height: 25px;
+	text-align: center;
+	font-size: 10px;
+color: white;
+}
+.footer { 
+	padding: 3px 10px 3px 10px;
+	color: #CCC;
+	font-size: 10px;
+	line-height: 25px;
+	height: 25px;
+}
+.barTxt { font-size: 10px; color: white; }
+
+/* Core Style */
+
+.inputsubmit {
+	font-size: 11px;
+	background: #EEB358 url("images/bgbar.gif");
+	color: white;
+	border: #A6A6A6 solid 1px;
+}
+
+.inputsubmit2 {
+	font-size: 11px;
+	background-color: #FFFFFF; 
+	color: #006699;
+	border: #FFFFFF; 
+	border-style: solid;
+ 	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+
+.error {
+	color: #FF0000;
+	text-decoration: none;
+	border: none;
+	font-weight: bold;
+}
+
+.mainTable { background-color: #F4FAFF; }
+.mainTableAlt { background-color: #FFFFFF; }
+.mainTableOn { background-color: #FFFFF0; }
+.TableHeader { background: #EEB358 url("images/bgbar.gif"); line-height: 25px; height: 25px; }
+.TableMsg { background-color: #ADADAD; width: 100%; }
+.TableHeaderText { color: #FFFFFF; font-size: 11px; text-align: center; }
+.TableHeaderText a { color: #FFFFFF; font-size: 11px; text-align: center; }
+.TableInfoText { color: #000000; font-size: 11px; background-color: #FFFFFF; }
+.priLow { background-color: #DDFFDD; }
+.priNormal { background-color: #FFFFF0; }
+.priHigh { background-color: #FEE7E7; }
+.privReceived { background-color: #3669CF; color: #3E3E3E; }
+.privBox { background-color: #FFFFFF; }
+.privBorder { background-color: black; }
+.privAttachments { background-color: #94C7FF; }
+.msgReceived { background-color: #E9E9E9; color: #3E3E3E; font-size: 10px; }
+.msgAnswered { background-color: #FFE0B3; color: #3E3E3E; font-size: 10px; }
+.msgAttachments { background-color: #F4FAFF; color: #000000; font-size: 10px; }
+.msgBorder { background-color: #ADADAD;  margin-top: 10px; }
+.msgBorderInfo { background-color: #ffffff; }
+.msgBox { background-color: #F9F9F9; }
+.searchBox { padding: 10px 0 0 10px; margin: auto; }
+.loginBox { padding: 5px; }
+.loginBox td { padding: 5px; }
+.loginBox td table td { line-height: 30px; }
+.buttons { text-align: center; clear:both; }
+
+#claim-ticket input {
+	letter-spacing: -1px;
+	font-family: sans-serif;
+	border: 1px solid #333; 
+	border-top-color: #999; 
+	border-left-color: #999;
+	background-color: #eee; 
+	color: #333;
+	padding: 0.5em 2em; 
+	cursor: pointer;
+} 
+#claim-ticket input:hover {
+	background-color: #E5FFBF;
+	color: #6f9913;
+	border-color: #6f9913;
+} 
+* html #claim-ticket input {
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+} 
+#claim-ticket p { 
+	margin-bottom: 2em; 
+	background-color: #FFFFBF;
+	padding: 0.5em; 
+}

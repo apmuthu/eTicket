@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>eTicket - Support Helpdesk Ticket System</title>
+	<style type="text/css" media="screen">
+
+
+		/* Default Style */
+		BODY {
+			font-family: Verdana, Arial;
+			font-size: 14px;
+			color: #000000;
+			background: #FFFFFF;
+		}
+		P {
+			padding: 3px;
+			padding-left: 10px;
+			line-height: 18px;
+		}
+		BLOCKQUOTE {
+			margin: 10px 20px 0px 20px;
+			padding: 10px;
+			border: 1px solid #8d8d8d;
+			background-color: #f5f5f5;
+		}
+		LI {
+			margin-top: 4px;
+		}
+		UL LI UL LI {
+			margin-top: 2px;
+		}
+		A, A:active, A:link, A:visited {
+			color: #EFB55C;
+			text-decoration: none;
+		}
+		A:hover {
+			color: #5577a5;
+			text-decoration: underline;
+		}
+		/* Place Holder Style */
+		#Container {
+			width: 780px;
+			margin-left: auto;
+			margin-right: auto; 
+		}
+		#Content {
+			background-color: #fafafa;
+			border: 1px solid #F8981D;
+			padding: 10px;
+			margin-top: -13px;
+		}
+		/* Title Style */
+		#Title,H1 {
+			font-family: Verdana, Arial;
+			font-size: 22px;
+			font-weight: bold;
+			color: #F8981D;
+			border-bottom: 1px solid #F8981D;
+			margin-bottom: 10px;
+		}
+		.SubTitle,H2 {
+			font-family: Verdana, Arial;
+			font-size: 18px;
+			font-weight: bold;
+			color: #EFB55C;
+		}
+		.SubSubTitle,H3 {
+			font-family: Verdana, Arial;
+			font-size: 14px;
+			font-weight: bold;
+			color: #F3C378;
+		}
+		/* Tabs */
+		UL#Tabs {
+			font-family: Verdana, Arial;
+			font-size: 12px;
+			font-weight: bold;
+			list-style-type: none;
+			padding-bottom: 28px;
+			border-bottom: 1px solid #F8981D;
+			margin-bottom: 12px;
+			z-index: 1;
+		}
+		#Tabs LI.Tab {
+			float: right;
+			height: 25px;
+			background-color: #F3C378;
+			margin: 2px 0px 0px 5px;
+			border: 1px solid #F8981D;
+		}
+		#Tabs LI.Tab A {
+			float: left;
+			display: block;
+			color: #666666;
+			text-decoration: none;
+			padding: 5px;
+		}
+		#Tabs LI.Tab A:hover {
+			background-color: #EFB55C;
+			border-bottom: 1px solid #EFB55C;
+		}
+		/* Selected Tab */
+		#Tabs LI.SelectedTab {
+			float: right;
+			height: 25px;
+			background-color: #fafafa;
+			margin: 2px 0px 0px 5px;
+			border-top: 1px solid #F8981D;
+			border-right: 1px solid #F8981D;
+			border-bottom: 1px solid #fafafa;
+			border-left: 1px solid #F8981D;
+		}
+		#Tabs LI.SelectedTab A {
+			float: left;
+			display: block;
+			color: #666666;
+			text-decoration: none;
+			padding: 5px;
+			cursor: default;
+		}
+		/* Footer */
+		#Footer {
+			text-align: center;
+		}
+	</style>
+
+
+	<script type="text/javascript">
+	/* <![CDATA[*/
+		// One Page
+		function tab_one() {
+			// Tab
+			document.getElementById('OneTab').className = 'SelectedTab';
+			document.getElementById('TwoTab').className = 'Tab';
+			document.getElementById('ThreeTab').className = 'Tab';
+			document.getElementById('FourTab').className = 'Tab';
+			document.getElementById('FiveTab').className = 'Tab';
+			// Page
+			document.getElementById('One').style.display= 'block';
+			document.getElementById('Two').style.display = 'none';
+			document.getElementById('Three').style.display = 'none';
+			document.getElementById('Four').style.display = 'none';
+			document.getElementById('Five').style.display = 'none';
+		}
+		// Two Page
+		function tab_two() {
+			// Tab
+			document.getElementById('OneTab').className = 'Tab';
+			document.getElementById('TwoTab').className = 'SelectedTab';
+			document.getElementById('ThreeTab').className = 'Tab';
+			document.getElementById('FourTab').className = 'Tab';
+			document.getElementById('FiveTab').className = 'Tab';
+			// Page
+			document.getElementById('One').style.display = 'none';
+			document.getElementById('Two').style.display = 'block';
+			document.getElementById('Three').style.display = 'none';
+			document.getElementById('Four').style.display = 'none';
+			document.getElementById('Five').style.display = 'none';
+		}
+		// Three Page
+		function tab_three() {
+			// Tab
+			document.getElementById('OneTab').className = 'Tab';
+			document.getElementById('TwoTab').className = 'Tab';
+			document.getElementById('ThreeTab').className = 'SelectedTab';
+			document.getElementById('FourTab').className = 'Tab';
+			document.getElementById('FiveTab').className = 'Tab';
+			// Page
+			document.getElementById('One').style.display= 'none';
+			document.getElementById('Two').style.display = 'none';
+			document.getElementById('Three').style.display = 'block';
+			document.getElementById('Four').style.display = 'none';
+			document.getElementById('Five').style.display = 'none';
+		}
+		// Four Page
+		function tab_four() {
+			// Tab
+			document.getElementById('OneTab').className = 'Tab';
+			document.getElementById('TwoTab').className = 'Tab';
+			document.getElementById('ThreeTab').className = 'Tab';
+			document.getElementById('FourTab').className = 'SelectedTab';
+			document.getElementById('FiveTab').className = 'Tab';
+			// Page
+			document.getElementById('One').style.display= 'none';
+			document.getElementById('Two').style.display = 'none';
+			document.getElementById('Three').style.display = 'none';
+			document.getElementById('Four').style.display = 'block';
+			document.getElementById('Five').style.display = 'none';
+		}
+		// Five Page
+		function tab_five() {
+			// Tab
+			document.getElementById('OneTab').className = 'Tab';
+			document.getElementById('TwoTab').className = 'Tab';
+			document.getElementById('ThreeTab').className = 'Tab';
+			document.getElementById('FourTab').className = 'Tab';
+			document.getElementById('FiveTab').className = 'SelectedTab';
+			// Page
+			document.getElementById('One').style.display= 'none';
+			document.getElementById('Two').style.display = 'none';
+			document.getElementById('Three').style.display = 'none';
+			document.getElementById('Four').style.display = 'none';
+			document.getElementById('Five').style.display = 'block';
+		}
+	/* ]]> */
+	</script>
+</head>
+
+<body onload="tab_one(); return false;">
+<!-- Container Start -->
+<div id="Container">
+
+	<!-- Title Start -->
+	<h1>eTicket</h1>
+	<!-- Title End -->
+
+	<!-- Tabs Start -->
+	<ul id="Tabs">
+		<li id="FiveTab" class="Tab"><a href="#Five" onclick="tab_five(); return false;" title="FAQ">FAQ</a></li>
+		<li id="FourTab" class="Tab"><a href="#Four" onclick="tab_four(); return false;" title="Features">Features</a></li>
+		<li id="ThreeTab" class="Tab"><a href="#Three" onclick="tab_three(); return false;" title="Config">Config</a></li>
+		<li id="TwoTab" class="Tab"><a href="#Two" onclick="tab_two(); return false;" title="Install">Install</a></li>
+		<li id="OneTab" class="SelectedTab"><a href="#One" onclick="tab_one(); return false;" title="Welcome">Welcome</a></li>
+	</ul>
+	<!-- Tabs End -->
+
+	<!-- Content Start -->
+	<div id="Content">
+
+		<!-- One Start -->
+		<a name="One"></a>
+		<div id="One">
+			<H2>&raquo; Welcome to the eTicket project</H2>
+			<p>eTicket is a PHP-based electronic support ticket system, that can receive tickets via email (pop3/pipe) or a web form. It also offers a ticket manager with many features. An ideal helpdesk solution for any website.</p>
+	    </div>
+		<!-- One End -->
+
+		<!-- Two Start -->
+		<a name="Two"></a>
+		<div id="Two">
+			<h2>&raquo; Installation</h2>
+			<p>Requirements are a web server that runs PHP 4.0.5 (or better) and MySQL 4.1 (or better).</p>
+			<p>To begin the automatic installation process you must prepair your enviroment by doing the following:</p>
+			<ol>
+			  <li>Download the latest version of eTicket</li>
+			  <li>Extract all files and folders from the compressed download file </li>
+			  <li>Upload the contents to an appropriate directory on your webserver (eg: /public_html/helpdesk/)</li>
+			  <li>Create a MySQL database using either command line or phpMyAdmin</li>
+			</ol>
+			<p>All you need to do then is visit the install path that you uploaded to, for example if you uploaded to /public_html/helpdesk/ visit: http://www.example.com/helpdesk/install/ and follow the on-screen instructions.</p>
+			<p>To start the installation process you require to have &quot;settings.php&quot; and &quot;automail-settings.pl&quot; accessible for writing. You MUST do this by chaning their chmod to &quot;666&quot;,
+				you can usually do this via your FTP client, or via shell or command line by doing: chmod 666 [file]</p>
+			<p>Once installation is complete you can do the following: </p>
+				<ul>
+				<li>Review the contents of "settings.php" and "automail-settings.pl", ensure settings meet your requirements</li>
+				<li>chmod "settings.php" and "automail-settings.pl" to 644, no further editing is required</li>
+				<li>chmod "automail.pl" to 755, must be executable</li>
+				<li>If you want attachments enabled you MUST chmod 666 your attachments directory</li>
+				<li>REMOVE the "install" directory from your server before you continue</li>
+				<li>Login to the admin area to configure the helpdesk</li>
+				<li>Setup email handling using the piping or pop3 method</li>
+				<li>If you intend on using the pipe method, make sure you have SpamAssassin configured first</li>
+		  </ul>
+		</div>
+		<!-- Two End -->
+
+		<!-- Three Start -->
+		<a name="Three"></a>
+		<div id="Three">
+			<h2>&raquo; Further Configuration</h2>
+<h3><strong>Mail Handling</strong></h3>
+<p>An important aspect of eTicket is the handling of incoming emails. There are two methods of handling 
+	incoming emails, one is the &quot;pipe/alias&quot; method, the second is the &quot;pop3&quot; method.</p>
+<p>Each has their pros and cons, the piping method uses realtime processing of incoming emails, the pop3 
+	method does not, however the pop3 method is best suited for people with pop3 email accounts that are not 
+	located on the local server, or cannot use the piping method.</p>
+
+<p><strong>The Pipe/Alias method (recommended)</strong></p>
+<p>Using this method requires the &quot;automail.pl&quot; (automail perl script). </p>
+<p><b>Notice:</b> If you DO USE the pipe method, you DO NOT require a POP3 email account.</p>
+<ul>
+  <li>Make sure the path to perl on line 1 is correct</li>
+  <li>Make sure the %config array has the correct settings for mysql (which should have changed after running the install process)</li>
+  <li>Make sure you upload &quot;automail.pl&quot; in ascii mode (it may need to be in your cgi-bin) and CHMOD it to 755</li>
+</ul>
+<blockquote>
+  <p> <strong>Setting up aliases in cPanel:</strong><br>
+    Add a forwarding rule for each email in each of the setup categories to automail.pl. For example forward support@example.com to &quot;|/path/to/automail.pl&quot; (Without the quotes)</p>
+  <p> <strong>Setting up aliases with qmail:</strong><br>
+    Create/Edit your .qmail-* for the domain you wish to forward and add a forwarding rule to automail.pl For example for support@example.com .qmail-support file should contain |/path/to/automail.pl.</p>
+  <p> <strong>Setting up aliases for sendmail:</strong><br>
+    Modify your aliases file by adding support: root, |/path/to/automail.pl and run newaliases</p>
+  <p> <strong>Setting up aliases in .procmailrc:</strong><br>
+    :0 c<br>
+    * ^To.*support@example.com<br>
+    |/path/to/automail.pl</p>
+</blockquote>
+<p><strong>Note:</strong> &quot;/path/to/automail.pl&quot; should be the <a href="http://en.wikipedia.org/wiki/Full_path">full path</a> (eg: /home/<user>/public_html/eticket/automail.pl).</p>
+<p><strong>Note:</strong> Ensure you include the "|" (aka pipe) at the start of the path when using this method.</p>
+<p><em><strong>Note:</strong> Windows users may require <a href="http://glob.com.au/sendmail/">sendmail.exe</a> to get this to work correctly.</em></p>
+
+<p><strong>The POP3 Method</strong></p>
+<p><em>Note: You should only use this method if you are unable to use the above method. (ie: If your mailbox is on a different server or you can't setup pipe mail)</em></p>
+<ul>
+	<li>This method requires the &quot;automail.php&quot; (automail php script).</li>
+  <li>You require a POP3/IMAP server, email address, username and password.</li>
+  <li>The host parameter can use the <a href="http://www.php.net/imap_open">imap_open</a> options (ie: "mail.example.com:995/ssl" access via ssl on port 995).</li>
+</ul>
+<p>By default mail will only be fetched on admin or staff login, to increase fetch frequency you must use a crontab or cronjob.</p>
+<blockquote>
+  <p>Setup a cron on the local host:<br>
+    Add the following to cron file normally in /etc/crontab in linix or unix based systems and adjust the time and path accordingly.<br>
+    */5 * * * * root /path/to/php /path/to/automail.php<br>
+    For windows users in &quot;Scheduled Tasks&quot; add &quot;c:\php\bin\php.exe c:\path\to\automail.php&quot;</p>
+  <p>Setup a cron on a remote host:<br>
+    Below are example on how to spawn automail.php from a remote server. Adjust the time and path accordingly.</p>
+  <p># if your server supports curl:<br>
+    0 * * * * curl -s -o /dev/null http://www.example.com/path/to/automail.php<br>
+    # if your server supports fetch:<br>
+    0 * * * * fetch -o /dev/null http://www.example.com/path/to/automail.php<br>
+    # if your server supports lynx:<br>
+    0 * * * * lynx &gt; /dev/null -dump http://www.example.com/path/to/automail.php<br>
+    # if your server supports wget:<br>
+    0 * * * * wget -q -O /dev/null http://www.example.com/path/to/automail.php</p>
+</blockquote>
+
+<p>There has been some concern over security of this file, as repeated access can cause problems.
+	With this in mind, we advise that you rename, password protect or limit access to this file.</p>
+<p>For example, placing this in your .htaccess file and creating a .htpasswd file, it will be password protected:</p>
+<blockquote>
+<pre>
+	&lt;files "automail.php"&gt;
+	AuthUserFile /home/home/.htpasswd
+	AuthType Basic
+	AuthName "Automail"
+	require valid-user
+	&lt;/files&gt;
+</pre>
+</blockquote>
+<p>You can then use "http://user:pass@hostname/dir/automail.php" in the cron as per above.</p>
+
+<p>Or you can limit the file to your IP address:</p>
+<pre>
+<blockquote>
+	&lt;files "automail.php"&gt;
+	Order Allow,Deny
+	Deny from all
+	Allow from 127.0.0.1
+	&lt;/files&gt;
+</pre>
+</blockquote>
+
+<p><em>Note: Users can still use open.php to open a new ticket without sending any emails should you decide to use neither of the above methods.</em></p>
+
+<h3><strong>Languages</strong></h3>
+<p>The language file is &quot;lang.php&quot;, by default is &quot;English&quot;.</p>
+<p>However, you are welcome to modify the language file by replacing the phrases.</p>
+<blockquote>
+  <p><em>eg: define('LANG_FATAL_ERROR','Fatal Error'); would become define('LANG_FATAL_ERROR','Erreur Mortelle'); in french.</em></p>
+</blockquote>
+<p>The idea is that once a language file for your language you will not need to create another one.</p>
+<h3>Themes</h3>
+<p>As osTicket's HTML code is so deeply included in the core code its difficult to fully template eTicket at the moment.</p>
+<p>The solution is to use &quot;themes&quot; to style your helpdesk to suit you.</p>
+<p>It can also be used to make language changes to existing themes which you can share with others. </p>
+<h3><strong>Enable/Disable Captcha</strong></h3>
+<p>Although its not recommended, due to potential spam, you can disable captcha by simply removing "captcha.php". The rest of the script will recognise that this file is missing and will not look for it or use it.</p>
+<p>If the security image/captcha is not working for you chances are that you don't have PHP compiled with <a href="http://uk.php.net/gd">GD</a></p>
+		</div>
+		<!-- Three End -->
+
+		<!-- Four Start -->
+		<a name="Four"></a>
+		<div id="Four">
+		<h2>&raquo; Features</h2>
+			<p><strong>Main Features:</strong></p>
+			<ul>
+			  <li> Supports aliases/piping with perl gateway </li>
+			  <li> Supports POP3 login with optional crontab.</li>
+			  <li> Uses Perl gateway, PHP backend, and MySQL database </li>
+			  <li> Handles unlimited emails</li>
+			  <li> Admin/Supporter/User panels </li>
+			  <li> Email Intervals to prevent auto responder loops </li>
+			  <li> Max Allowed to limit maximum tickets user can have opened </li>
+			  <li> Filters to remove messages in replies</li>
+			  <li> Accept attachments and limit size</li>
+			</ul>
+			<p><strong>Administration Features:</strong></p>
+			<ul>
+			  <li>Completely delete tickets from database</li>
+			  <li> Create categories (departments)</li>
+			  <li> Create Represenatives (Supporters) </li>
+			  <li> Define groups</li>
+			  <li> Edit or disable response messages</li>
+			  <li> Email alerts compatible with pagers </li>
+			  <li> and much more...</li>
+			</ul>
+			<p><strong>Staff Features:</strong></p>
+			<ul>
+			  <li>View only tickets in departments you have access to</li>
+			  <li>Can not delete tickets</li>
+			</ul>
+			<p><strong>User Features:</strong></p>
+			<ul>
+			  <li> Login with email and any ticket  assigned to you</li>
+			  <li> View all tickets sent from that email</li>
+			</ul>
+			<p><strong>New Features include:</strong></p>
+			<ul>
+			  <li> Easy to upgrade/install</li>
+			  <li> Easy to style using themes</li>
+			  <li> RSS feeds for clients</li>
+			  <li> Captcha on web forms to reduce spam</li>
+			  <li> Configurable Spam Assassin mod for automail.pl</li>
+			  <li> Better language support with changeable language file</li>
+			  <li> Predefined/canned answer responses</li>
+			  <li> Better search functionality</li>
+			  <li> Ability to assign representatives to tickets</li>
+			  <li> Built in flash based mp3 player</li>
+			</ul>
+	  </div>
+		<!-- Four End -->
+
+		<!-- Five Start -->
+		<a name="Five"></a>
+		<div id="Five">
+			<h2>&raquo; FAQ</h2>
+				<p>
+				<ul>
+					<li>Why does eTicket exist? / What happened to osTicket?</li>
+					<ul>
+						<li>Until late 2007, there has been no official release of osTicket since 2005, during this time many bugs, 
+							problems and issues have been idenified, yet nothing was officially released to resolve them.</li>
+						<li>In addition to this the official download of osTicket was removed.</li>
+						<li>In 2005 it was said that osTicket 2.0 was in the pipeline, however this never appeared,
+							also as this was going to be a complete rewrite, it was suggested that you would be unable to
+							upgrade from previous versions of osTicket to osTicket 2.0, therefore leaving a gap for support.</li>
+					</ul>
+					<li>What is the difference between osTicket and eTicket?</li>
+					<ul>
+						<li>The purpose of the eTicket project is to take the last official osTicket release 
+							and resolve all known problems and add requested features.</li>
+						<li>Almost every single peice of code has been changed, however the basic structure remains 
+							the same to make it easy for users to upgrade from the old osTicket to the new eTicket.</li>
+						<li>It was released under the eTicket name so people are aware of the change in development.</li>
+					</ul>
+
+					<li>Can I upgrade from osTicket to eTicket?</li>
+					<ul>
+						<li>Yes, and its very easy to do. (See Install/Upgrading)</li>
+					</ul>
+					<li>Can I install eTicket from fresh?</li>
+					<ul>
+						<li>Yes, and its very easy to do. (See Install/Installing)</li>
+					</ul>
+					<li>Why should I upgrade from osTicket to eTicket?</li>
+					<ul>
+						<li>The main reason for doing this is because of the bug fixes that have been resolved in eTicket.</li>
+						<li>There are many potentially fatal bugs in osTicket, I would not recomment using it, and upgrading to eTicket asap.</li>
+					</ul>
+						<li>How do I disable the captcha security code?</li>
+					<ul>
+						<li>Read the "Config" section.</li>
+					</ul>
+						<li>Why do you recommend using the pipe method over pop3?</li>
+					<ul>
+						<li>The pipe method works in real-time, as your mail server receives the mail it's processed.</li>
+						<li>The automail.pl script is far more developed than any other method.</li>
+					</ul>
+						<li>Why do you use perl for the pipe method?</li>
+					<ul>
+						<li>More people have perl installed on their system than PHP CLI.</li>
+						<li>Perl is already installed on most servers.</li>
+						<li>Not many people have PHP CLI installed on their servers.</li>
+						<li>Note: I'm aware I said the same thing 3 times, but it gets the point across. *grin*</li>
+					</ul>
+						<li>What is the default username/password?</li>
+					<ul>
+						<li>The default username is 'admin'.</li>
+						<li>The installer asks you for an admin password.</li>
+						<li>You can change these details once logged into eTicket</li>
+					</ul>
+						<li>Can tickets be edited?</li>
+					<ul>
+						<li>No, eTicket is an email based ticket system.</li>
+						<li>Once a email has been sent it cannot be edited.</li>
+						<li>Therefore the same goes for tickets.</li>
+					</ul>
+			  </ul>
+	  </div>
+		<!-- Five End -->	
+
+	</div>
+	<!-- Content End -->
+</div>
+<!-- Container End -->
+</body>
+</html>
